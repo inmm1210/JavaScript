@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>DOM</title>
+    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Bowlby+One+SC" rel="stylesheet">
+    <style>
+        body {
+            background-color:rgb(37, 37, 37);
+            color:aliceblue;
+            padding:2rem;
+            margin:0;
+            font-family: 'Architects Daughter', cursive;
+            font-size: 12px;
+        }
+        h1 {
+            font-family: 'Bowlby One SC', cursive;
+            font-size: 2.8rem;
+            color: cornflowerblue;
+            margin:0;
+        }
+        ol {
+            font-family: 'Architects Daughter', cursive;
+            font-size: 1.6rem;
+        }
+    </style>
+</head>
+<body>
+    <div id="grupoBotones">
+        <button id="btn1" class="odd">Boton 1</button>
+        <button id="btn2" class="">Boton 2</button>
+        <button id="btn3" class="odd">Boton 3</button>
+    </div>
+   
+    <script>
+        //Trae todos los elementos que tiene el documento
+        console.log(document.children);
+
+        //nos muestra todos los elementos tipo button
+        botones = document.getElementsByTagName("button");
+        console.log(botones);
+
+        
+
+
+        let grupoBotones = document.getElementById('grupoBotones');
+        let nuevoBoton = document.createElement('button');
+        nuevoBoton.innerText = "Boton 4";
+        nuevoBoton.setAttribute("id","btn4"); //aqui se settea el id del boton
+        grupoBotones.appendChild(nuevoBoton);
+
+       for(boton of botones){
+           boton.style.color="blue";
+       }
+
+       //Nos trae los botones que son nones 
+       botonesNones = document.getElementsByClassName("odd");
+        console.log(botonesNones);
+
+        for(boton of botonesNones)
+        {
+            boton.style.color="red";
+        }
+
+        boton1 = document.getElementById('btn1');
+
+        boton1.addEventListener('click',function(){
+            alert("Click al boton 1");
+        })
+    </script> 
+</body>
+</html>

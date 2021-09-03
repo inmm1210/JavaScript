@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>DOM</title>
+    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Bowlby+One+SC" rel="stylesheet">
+    <style>
+        body {
+            background-color:rgb(37, 37, 37);
+            color:aliceblue;
+            padding:2rem;
+            margin:0;
+            font-family: 'Architects Daughter', cursive;
+            font-size: 12px;
+        }
+        h1 {
+            font-family: 'Bowlby One SC', cursive;
+            font-size: 2.8rem;
+            color: cornflowerblue;
+            margin:0;
+        }
+        ol {
+            font-family: 'Architects Daughter', cursive;
+            font-size: 1.6rem;
+        }
+        .hidden{
+	display:none;
+}
+    </style>
+</head>
+<body>
+    <!--Utilizando DELEGATION para EVENT HANDLING-->
+         Introduce ciudad <input id="text" type="text"/>
+        Introduce tu nombre <input id="text2"  type="text"/>
+        Introduce tu correo  <input id= "text3" onekeyup="validarBotones()" type="text"/>
+        <button id="btn" disabled>Me veo</button>
+        <button id="btn" disabled>Me veo x2</button>
+
+
+    <script>
+        // let validInput = document.getElementById('text');
+        // let btn1 = document.getElementsByTagName('button');
+        
+        // validInput.addEventListener("keyup",function(){
+        //     let numeroCaracteres = validInput.value.lenght;
+        //     for(boton of btn1)
+        //     {
+        //         boton.disable=numeroCaracteres==0;
+        //     }
+            
+        // });
+        let textBox1 = document.getElementById('text');
+            let textBox2 = document.getElementById('text2');
+            let textBox3 = document.getElementById('text3');    
+            
+            textBox1.addEventListener("keyup","validarBotones");
+            textBox2.addEventListener("keyup","validarBotones");
+          
+
+
+
+        
+
+        function validarBotones(){ 
+            let numeroCaracteres1 = textBox1.value.lenght;
+            let numeroCaracteres2= textBox2.value.lenght;
+            let numeroCaracteres3 = textBox3.value.lenght;
+            let botones = document.getElementsByTagName('button');
+            
+           cajasLlenas  = (numeroCaracteres1>0&&numeroCaracteres2>0&&numeroCaracteres3>0)
+            for(boton of botones)
+            {
+                boton.disable=!cajasLlenas;
+            }
+        }
+        
+    </script> 
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>DOM</title>
+    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Bowlby+One+SC" rel="stylesheet">
+    <style>
+        body {
+            background-color:rgb(37, 37, 37);
+            color:aliceblue;
+            padding:2rem;
+            margin:0;
+            font-family: 'Architects Daughter', cursive;
+            font-size: 12px;
+        }
+        h1 {
+            font-family: 'Bowlby One SC', cursive;
+            font-size: 2.8rem;
+            color: cornflowerblue;
+            margin:0;
+        }
+        ol {
+            font-family: 'Architects Daughter', cursive;
+            font-size: 1.6rem;
+        }
+
+        .redondo{
+            display: block;
+        width: 50px;
+        height: 50px;
+         border-radius: 50%;
+        }
+      </style>
+</head>
+<body>
+        
+        <input type="radio"   id="idioma" name="idioma" onclick="cambio(this)" value="espanish"> Español<br>
+
+        <input type="radio"   id="idioma" name="idioma" onclick="cambio(this)" value="english"> Ingles<br>
+
+        <input type="button" id="btnAlert" value="Message">
+
+
+    <script>
+        
+        function ingles(){
+
+            alert("Hello World")
+
+        }
+
+        function spanish(){
+        alert("Hola mundo")
+        }
+
+        var español = function(){
+                alert("hola");
+        }
+        var english = function(){
+
+            alert("Hello World")
+
+        }
+        // function cambio(radioButton){
+        //     let boton =document.getElementById("btnAlert");
+
+        //     console.log(radioButton.value);
+            
+        //     if(radioButton.value=="english")
+        //     {     
+        //         boton.removeEventListener("click",spanish);
+
+        //         boton.addEventListener("click",ingles);
+        //     }
+        //     else{                 
+        //         boton.removeEventListener("click",ingles);
+                
+        //         boton.addEventListener("click",spanish);
+
+        //     }
+        //  }    
+         let event;
+         function cambio(radioButton){
+            let boton =document.getElementById("btnAlert");
+            boton.removeEventListener("click",event);
+
+            console.log(radioButton.value);
+            
+            if(radioButton.value=="english")
+            {
+                event=english;
+            }
+            else{                 
+               
+                event=español;
+            }
+
+             boton.addEventListener("click",event);
+
+
+         }        
+        
+    </script> 
+</body>
+</html>

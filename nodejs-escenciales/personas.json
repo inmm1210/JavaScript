@@ -1,0 +1,20 @@
+[
+    {
+        "nombre": "Bruno",
+        "apPaterno": "Diaz",
+        "apMaterno": "TopSecret",
+        "email": "yosoybatman.com"
+    },
+    {
+        "nombre": "Clark",
+        "apPaterno": "Kent",
+        "apMaterno": "solop se que es martha",
+        "email": "yosoysuperman.com"
+    },
+    {
+        "nombre": "Diana",
+        "apPaterno": "no se que",
+        "apMaterno": "menos",
+        "email": "yosoywonderwoman.com"
+    }
+]

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Class Excercise</title>
+    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Bowlby+One+SC" rel="stylesheet">
+    <style>
+        body {
+            background-color:rgb(37, 37, 37);
+            color:aliceblue;
+            padding:2rem;
+            margin:0;
+            font-family: 'Architects Daughter', cursive;
+            font-size: 12px;
+        }
+        h1 {
+            font-family: 'Bowlby One SC', cursive;
+            font-size: 2.8rem;
+            color: cornflowerblue;
+            margin:0;
+        }
+        ol {
+            font-family: 'Architects Daughter', cursive;
+            font-size: 1.6rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Class Excercise </h1>
+    
+    
+    <script>
+        let listaNumeros = [20,33,45,12,11];
+        listaNumeros.forEach((numero) => {
+            if(numero%2==0)
+            {
+                numero = numero +5;
+            }
+            else{
+                numero=numero-5;
+            }
+            console.log("Numero",numero);
+        });
+
+        //Lo de arriba se puede sustituir por esra linea de codigo
+        listaNumeros.forEach((elNumero)=>console.log(elNumero+((elNumero%2==0)?5:-5)));
+
+    </script> 
+</body>
+</html>
